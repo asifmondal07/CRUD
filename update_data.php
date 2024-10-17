@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include '../CRUD/db_connect.php';
 $id=$_POST['userid'];
 $name=$_POST['new_name'];
 $phone=$_POST['new_phone'];
@@ -16,6 +16,8 @@ if(mysqli_num_rows($result) > 0){
     echo "No user found with ID $userid";
     exit();
 }
+
+
 // Handle image upload if a new file is uploaded
 if (!empty($_FILES['new_image1']['name'])) {
     $target_dir = "uploading/";

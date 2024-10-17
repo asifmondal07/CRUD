@@ -1,7 +1,7 @@
 <?php
 $id=$_POST['id'];
 
-include 'db_connect.php';
+include '../CRUD/db_connect.php';
 
 
 $sql="SELECT * FROM user WHERE id = $id";
